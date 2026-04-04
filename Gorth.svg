@@ -1,31 +1,73 @@
 <svg width="2048" height="2048" viewBox="512 512 1024 1024" xmlns="http://www.w3.org/2000/svg">
     <defs>
-        <!-- Gold Metal -->
-        <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#FFF4C9"/>
-            <stop offset="25%" stop-color="#D4AF37"/>
+        <!-- Royal -->
+        <linearGradient id="royal" x1="1" y1="1" x2="0" y2="0">
+            <stop offset="0%" stop-color="#8C6B3B"/>
+            <stop offset="25%" stop-color="#A08D57"/>
             <stop offset="50%" stop-color="#B08D57"/>
-            <stop offset="75%" stop-color="#8C6B3B"/>
-            <stop offset="100%" stop-color="#6E552F"/>
+            <stop offset="75%" stop-color="#C89B41"/>
+            <stop offset="100%" stop-color="#D4AF37"/>
+        </linearGradient>
+
+        <!-- Antique Metal -->
+        <linearGradient id="gold-metal" x1="1" y1="1" x2="0" y2="0">
+            <stop offset="0%" stop-color="#C5AB50"/>
+            <stop offset="25%" stop-color="#E4D674"/>
+            <stop offset="50%" stop-color="#FBF8AE"/>
+            <stop offset="75%" stop-color="#F9FADE"/>
+            <stop offset="100%" stop-color="#AC933E"/>
+        </linearGradient>
+
+        <!-- Fancy Metal -->
+        <linearGradient id="fancy-metal" x1="1" y1="1" x2="0" y2="0">
+            <stop offset="0%" stop-color="#CC9900"/>
+            <stop offset="25%" stop-color="#D4AF37"/>
+            <stop offset="50%" stop-color="#DEB82D"/>
+            <stop offset="75%" stop-color="#E7CF27"/>
+            <stop offset="100%" stop-color="#FFDF00"/>
+        </linearGradient>
+
+        <!-- Gold Metal -->
+        <linearGradient id="golden-metal" x1="1" y1="1" x2="0" y2="0">
+            <stop offset="0%" stop-color="#C18700"/>
+            <stop offset="25%" stop-color="#D8A309"/>
+            <stop offset="50%" stop-color="#EABF14"/>
+            <stop offset="75%" stop-color="#EAD355"/>
+            <stop offset="100%" stop-color="#F7F18B"/>
+        </linearGradient>
+
+        <!-- Dark Metal -->
+        <linearGradient id="dark-metal" x1="1" y1="1" x2="0" y2="0">
+            <stop offset="0%" stop-color="#191919"/>
+            <stop offset="25%" stop-color="#393939"/>
+            <stop offset="50%" stop-color="#4B4B4B"/>
+            <stop offset="75%" stop-color="#535353"/>
+            <stop offset="100%" stop-color="#5D5D5D"/>
+        </linearGradient>
+
+        <!-- Silver Metal -->
+        <linearGradient id="silver-metal" x1="1" y1="1" x2="0" y2="0">
+            <stop offset="0%" stop-color="#B4B5B8"/>
+            <stop offset="25%" stop-color="#C0C0C3"/>
+            <stop offset="50%" stop-color="#CBCCCD"/>
+            <stop offset="75%" stop-color="#D7D7D8"/>
+            <stop offset="100%" stop-color="#E3E3E3"/>
+        </linearGradient>
+
+        <!-- Platinum Metal -->
+        <linearGradient id="platinum-metal" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#CDCDCD"/>
+            <stop offset="25%" stop-color="#DADADA"/>
+            <stop offset="50%" stop-color="#E6E6E6"/>
+            <stop offset="75%" stop-color="#F0F0F0"/>
+            <stop offset="100%" stop-color="#F6F6F6"/>
         </linearGradient>
 
         <!-- Champagne Metal -->
-        <linearGradient id="champagne" x1="0" y1="0" x2="1" y2="1">
+        <linearGradient id="champagne-metal" x1="0" y1="0" x2="1" y2="1">
             <stop offset="0%" stop-color="#FFFDF5"/>
             <stop offset="50%" stop-color="#F3E6C9"/>
             <stop offset="100%" stop-color="#CFC8BE"/>
-        </linearGradient>
-
-        <!-- Dark Gold -->
-        <linearGradient id="dark-gold" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#8C6B3B"/>
-            <stop offset="100%" stop-color="#3E2F1C"/>
-        </linearGradient>
-
-        <!-- Black Metal -->
-        <linearGradient id="black-metal" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#444"/>
-            <stop offset="100%" stop-color="#111"/>
         </linearGradient>
     </defs>
 
@@ -33,7 +75,7 @@
     <rect width="2048" height="2048" fill="none"/>
 
     <circle cx="1024" cy="1024" r="512" fill="none"/>
-    <!--circle cx="1024" cy="1024" r="768" fill="#E0E0E0" /-->
+    <!--circle cx="1024" cy="1024" r="768" fill="url(#silver-metal)" /-->
 
     <polygon
             points="
@@ -65,7 +107,7 @@
           1290.0430040425795,870.4
           1290.0430040425795,768
         "
-            fill="#E0E0E0"
+            fill="url(#silver-metal)"
     />
     <polygon
             points="
@@ -74,7 +116,7 @@
           757.9569959574204,870.4
           757.9569959574204,768
         "
-            fill="#1F1F1F"
+            fill="url(#dark-metal)"
     />
     <polygon
             points="
@@ -83,7 +125,7 @@
           1112.6810013475265,768
           1112.6810013475265,870.4
         "
-            fill="#1F1F1F"
+            fill="url(#dark-metal)"
     />
     <polygon
             points="
@@ -92,7 +134,7 @@
           935.3189986524735,768
           935.3189986524735,870.4
         "
-            fill="#E0E0E0"
+            fill="url(#silver-metal)"
     />
     <polygon
             points="
@@ -108,7 +150,7 @@
           1024,921.6
         "
             fill-rule="evenodd"
-            fill="#FEF8E1"
+            fill="url(#gold-metal)"
     />
     <polygon
             points="
@@ -117,7 +159,7 @@
           1024,819.2
           935.3189986524735,768
         "
-            fill="#B08D57"
+            fill="url(#royal)"
     />
 
     <!-- Left -->
@@ -138,7 +180,7 @@
           935.3189986524735,1177.6
           935.3189986524735,1382.4
         "
-            fill="#1F1F1F"
+            fill="url(#dark-metal)"
     />
     <polygon
             points="
@@ -147,7 +189,7 @@
           846.637997304947,1228.8
           757.9569959574204,1280
         "
-            fill="#FEF8E1"
+            fill="url(#gold-metal)"
     />
     <polygon
             points="
@@ -158,7 +200,7 @@
           846.637997304947,1228.8
           846.637997304947,1433.6
         "
-            fill="#E0E0E0"
+            fill="url(#silver-metal)"
     />
     <polygon
             points="
@@ -176,7 +218,7 @@
           757.9569959574204,972.8
           1024,1126.4
         "
-            fill="#FEF8E1"
+            fill="url(#gold-metal)"
     />
     <polygon
             points="
@@ -185,7 +227,7 @@
           757.9569959574204,972.8
           757.9569959574204,870.4
         "
-            fill="#1F1F1F"
+            fill="url(#dark-metal)"
     />
     <polygon
             points="
@@ -202,7 +244,7 @@
           935.3189986524735,1177.6
           935.3189986524735,972.8
         "
-            fill="#E0E0E0"
+            fill="url(#silver-metal)"
     />
     <polygon
             points="
@@ -211,7 +253,7 @@
           846.637997304947,1126.4
           846.637997304947,1228.8
         "
-            fill="#B08D57"
+            fill="url(#royal)"
     />
 
     <!-- Right -->
@@ -236,7 +278,7 @@
           1290.0430040425795,1177.6
           1290.0430040425795,1075.2
         "
-            fill="#E0E0E0"
+            fill="url(#silver-metal)"
     />
     <polygon
             points="
@@ -245,7 +287,7 @@
           1378.7240053901061,1228.8
           1290.0430040425795,1177.6
         "
-            fill="#FEF8E1"
+            fill="url(#gold-metal)"
     />
     <polygon
             points="
@@ -254,7 +296,7 @@
           1112.6810013475265,1075.2
           1112.6810013475265,1177.6
         "
-            fill="#E0E0E0"
+            fill="url(#silver-metal)"
     />
     <polygon
             points="
@@ -263,7 +305,7 @@
           1378.7240053901061,921.6
           1467.4050067376326,972.8
         "
-            fill="#FEF8E1"
+            fill="url(#gold-metal)"
     />
     <polygon
             points="
@@ -280,7 +322,7 @@
           1467.4050067376326,870.4
           1467.4050067376326,768
         "
-            fill="#1F1F1F"
+            fill="url(#dark-metal)"
     />
     <polygon
             points="
@@ -289,6 +331,6 @@
           1201.362002695053,1228.8
           1290.0430040425795,1177.6
         "
-            fill="#B08D57"
+            fill="url(#royal)"
     />
 </svg>

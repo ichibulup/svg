@@ -60,7 +60,7 @@
             fill-rule="evenodd"
             shape-rendering="crispEdges"
             fill="#FFFFFF"
-            opacity="0.3"
+            opacity="0.5"
     />
     <polygon
             points="
@@ -70,7 +70,7 @@
             fill-rule="evenodd"
             shape-rendering="crispEdges"
             fill="#FFFFFF"
-            opacity="0.3"
+            opacity="0.5"
     />
     <polygon
             points="
@@ -80,7 +80,7 @@
             fill-rule="evenodd"
             shape-rendering="crispEdges"
             fill="#FFFFFF"
-            opacity="0.3"
+            opacity="0.5"
     />
     <!-- // -->
 

@@ -3,12 +3,17 @@
   "version": "0.1.2",
   "private": true,
   "scripts": {
+    "pull": "pnpm install",
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start --turbopack",
-    "lint": "eslint"
+    "lint": "eslint",
+    "format": "prettier --write \"**/*.{ts,tsx}\"",
+    "typecheck": "tsc --noEmit",
+    "postinstall": "pnpm update gorth-ui gorth-base"
   },
   "dependencies": {
+    "gorth-base": "github:goraria/gorth-base",
     "gorth-ui": "github:goraria/gorth-ui",
     "next": "16.2.6",
     "react": "19.2.6",
@@ -16,9 +21,11 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.0",
-    "babel-plugin-react-compiler": "1.0.0",
+    "@types/react": "19.2.14",
+    "babel-plugin-react-compiler": "^1.0.0",
     "eslint": "^9.39.4",
-    "eslint-config-next": "16.2.6",
+    "eslint-config-next": "^16.2.6",
     "tailwindcss": "^4.3.0"
-  }
+  },
+  "packageManager": "pnpm@10.33.4"
 }

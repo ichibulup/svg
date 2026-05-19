@@ -1,5 +1,9 @@
-allowBuilds:
-  sharp: false
-  unrs-resolver: false
-  gorth-ui: true
-  gorth-base: true
+onlyBuiltDependencies:
+  - "gorth-ui"
+  - "gorth-base"
+#allowBuilds:
+#  gorth-base: true
+#  gorth-ui: true
+#  msw: false
+#  sharp: false
+#  unrs-resolver: false

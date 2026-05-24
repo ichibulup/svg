@@ -24,12 +24,12 @@ importers:
         specifier: 19.2.6
         version: 19.2.6(react@19.2.6)
     devDependencies:
+      '@eslint/eslintrc':
+        specifier: ^3.3.5
+        version: 3.3.5
       '@tailwindcss/postcss':
         specifier: ^4.3.0
         version: 4.3.0
-      '@types/react':
-        specifier: 19.2.14
-        version: 19.2.14
       babel-plugin-react-compiler:
         specifier: ^1.0.0
         version: 1.0.0
@@ -39,6 +39,15 @@ importers:
       eslint-config-next:
         specifier: ^16.2.6
         version: 16.2.6(@typescript-eslint/parser@8.59.2(eslint@9.39.4(jiti@2.7.0))(typescript@6.0.3))(eslint@9.39.4(jiti@2.7.0))(typescript@6.0.3)
+      postcss:
+        specifier: ^8.5.14
+        version: 8.5.14
+      prettier:
+        specifier: ^3.8.3
+        version: 3.8.3
+      prettier-plugin-tailwindcss:
+        specifier: ^0.8.0
+        version: 0.8.0(prettier@3.8.3)
       tailwindcss:
         specifier: ^4.3.0
         version: 4.3.0
@@ -2787,11 +2796,11 @@ packages:
     engines: {node: '>= 0.4'}
 
   gorth-base@https://codeload.github.com/goraria/gorth-base/tar.gz/97dbdb3e1f76b7e5eaa5fb19789c50f24a6fe86e:
-    resolution: {gitHosted: true, integrity: sha512-kSHps21jAvrsJ0xiyO3peco0y6K4KcD6faLF5xwiRJRxIsGdZMeAREvE1G0UHjIU/0mACrx36hJ1cKeCmhb76A==, tarball: https://codeload.github.com/goraria/gorth-base/tar.gz/97dbdb3e1f76b7e5eaa5fb19789c50f24a6fe86e}
+    resolution: {gitHosted: true, tarball: https://codeload.github.com/goraria/gorth-base/tar.gz/97dbdb3e1f76b7e5eaa5fb19789c50f24a6fe86e}
     version: 1.0.0
 
   gorth-ui@https://codeload.github.com/goraria/gorth-ui/tar.gz/dee5cd77b70751b7d6a79ec13672b4c99e04f19f:
-    resolution: {gitHosted: true, integrity: sha512-ZZy0/Hvo1vG9/v9E33qsZw21tWJAJZWDoa1knysN86obdhxBc6R7xA62cH4nLdCR1u6Wo8jGz2im65chOS000A==, tarball: https://codeload.github.com/goraria/gorth-ui/tar.gz/dee5cd77b70751b7d6a79ec13672b4c99e04f19f}
+    resolution: {gitHosted: true, tarball: https://codeload.github.com/goraria/gorth-ui/tar.gz/dee5cd77b70751b7d6a79ec13672b4c99e04f19f}
     version: 1.0.6
     peerDependencies:
       next: ^16.2.6
@@ -3647,6 +3656,66 @@ packages:
   prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
+
+  prettier-plugin-tailwindcss@0.8.0:
+    resolution: {integrity: sha512-V8ITGH87yuBDF6JpEZTOVlUz/saAwqb8f3HRgUj8Lh+tGCcrmorhsLpYqzygwFwK0PE2Ib6Mv3M7T/uE2tZV1g==}
+    engines: {node: '>=20.19'}
+    peerDependencies:
+      '@ianvs/prettier-plugin-sort-imports': '*'
+      '@prettier/plugin-hermes': '*'
+      '@prettier/plugin-oxc': '*'
+      '@prettier/plugin-pug': '*'
+      '@shopify/prettier-plugin-liquid': '*'
+      '@trivago/prettier-plugin-sort-imports': '*'
+      '@zackad/prettier-plugin-twig': '*'
+      prettier: ^3.0
+      prettier-plugin-astro: '*'
+      prettier-plugin-css-order: '*'
+      prettier-plugin-jsdoc: '*'
+      prettier-plugin-marko: '*'
+      prettier-plugin-multiline-arrays: '*'
+      prettier-plugin-organize-attributes: '*'
+      prettier-plugin-organize-imports: '*'
+      prettier-plugin-sort-imports: '*'
+      prettier-plugin-svelte: '*'
+    peerDependenciesMeta:
+      '@ianvs/prettier-plugin-sort-imports':
+        optional: true
+      '@prettier/plugin-hermes':
+        optional: true
+      '@prettier/plugin-oxc':
+        optional: true
+      '@prettier/plugin-pug':
+        optional: true
+      '@shopify/prettier-plugin-liquid':
+        optional: true
+      '@trivago/prettier-plugin-sort-imports':
+        optional: true
+      '@zackad/prettier-plugin-twig':
+        optional: true
+      prettier-plugin-astro:
+        optional: true
+      prettier-plugin-css-order:
+        optional: true
+      prettier-plugin-jsdoc:
+        optional: true
+      prettier-plugin-marko:
+        optional: true
+      prettier-plugin-multiline-arrays:
+        optional: true
+      prettier-plugin-organize-attributes:
+        optional: true
+      prettier-plugin-organize-imports:
+        optional: true
+      prettier-plugin-sort-imports:
+        optional: true
+      prettier-plugin-svelte:
+        optional: true
+
+  prettier@3.8.3:
+    resolution: {integrity: sha512-7igPTM53cGHMW8xWuVTydi2KO233VFiTNyF5hLJqpilHfmn8C8gPf+PS7dUT64YcXFbiMGZxS9pCSxL/Dxm/Jw==}
+    engines: {node: '>=14'}
+    hasBin: true
 
   pretty-ms@9.3.0:
     resolution: {integrity: sha512-gjVS5hOP+M3wMm5nmNOucbIrqudzs9v/57bWRHQWLYklXqoXKrVfYW2W9+glfGsqtPgpiz5WwyEEB+ksXIx3gQ==}
@@ -6016,6 +6085,7 @@ snapshots:
   '@types/react@19.2.14':
     dependencies:
       csstype: 3.2.3
+    optional: true
 
   '@types/set-cookie-parser@2.4.10':
     dependencies:
@@ -6533,7 +6603,8 @@ snapshots:
 
   cssesc@3.0.0: {}
 
-  csstype@3.2.3: {}
+  csstype@3.2.3:
+    optional: true
 
   d3-array@3.2.4:
     dependencies:
@@ -8173,6 +8244,12 @@ snapshots:
   powershell-utils@0.1.0: {}
 
   prelude-ls@1.2.1: {}
+
+  prettier-plugin-tailwindcss@0.8.0(prettier@3.8.3):
+    dependencies:
+      prettier: 3.8.3
+
+  prettier@3.8.3: {}
 
   pretty-ms@9.3.0:
     dependencies:

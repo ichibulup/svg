@@ -16,8 +16,8 @@ export default function MainLayout({ children }) {
       <AppSidebar
         data={{
           user: {
-            name: "shadcn",
-            email: "m@example.com",
+            name: "Japtor Gorthenburg",
+            email: "japtor@gorth.com",
             avatar: "/square-bill.jpg",
           },
           ...dashboardSidebar

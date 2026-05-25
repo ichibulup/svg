@@ -17,12 +17,18 @@ importers:
       next:
         specifier: 16.2.6
         version: 16.2.6(@babel/core@7.29.0)(@opentelemetry/api@1.9.1)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      next-themes:
+        specifier: ^0.4.6
+        version: 0.4.6(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       react:
-        specifier: 19.2.6
+        specifier: ^19.2.6
         version: 19.2.6
       react-dom:
-        specifier: 19.2.6
+        specifier: ^19.2.6
         version: 19.2.6(react@19.2.6)
+      vaul:
+        specifier: ^1.1.2
+        version: 1.1.2(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
     devDependencies:
       '@eslint/eslintrc':
         specifier: ^3.3.5
@@ -30,14 +36,11 @@ importers:
       '@tailwindcss/postcss':
         specifier: ^4.3.0
         version: 4.3.0
-      babel-plugin-react-compiler:
-        specifier: ^1.0.0
-        version: 1.0.0
       eslint:
         specifier: ^9.39.4
         version: 9.39.4(jiti@2.7.0)
       eslint-config-next:
-        specifier: ^16.2.6
+        specifier: 16.2.6
         version: 16.2.6(@typescript-eslint/parser@8.59.4(eslint@9.39.4(jiti@2.7.0))(typescript@6.0.3))(eslint@9.39.4(jiti@2.7.0))(typescript@6.0.3)
       postcss:
         specifier: ^8.5.14
@@ -2822,11 +2825,11 @@ packages:
     engines: {node: '>= 0.4'}
 
   gorth-base@https://codeload.github.com/goraria/gorth-base/tar.gz/97dbdb3e1f76b7e5eaa5fb19789c50f24a6fe86e:
-    resolution: {gitHosted: true, tarball: https://codeload.github.com/goraria/gorth-base/tar.gz/97dbdb3e1f76b7e5eaa5fb19789c50f24a6fe86e}
+    resolution: {tarball: https://codeload.github.com/goraria/gorth-base/tar.gz/97dbdb3e1f76b7e5eaa5fb19789c50f24a6fe86e}
     version: 1.0.0
 
   gorth-ui@https://codeload.github.com/goraria/gorth-ui/tar.gz/dee5cd77b70751b7d6a79ec13672b4c99e04f19f:
-    resolution: {gitHosted: true, tarball: https://codeload.github.com/goraria/gorth-ui/tar.gz/dee5cd77b70751b7d6a79ec13672b4c99e04f19f}
+    resolution: {tarball: https://codeload.github.com/goraria/gorth-ui/tar.gz/dee5cd77b70751b7d6a79ec13672b4c99e04f19f}
     version: 1.0.6
     peerDependencies:
       next: ^16.2.6
@@ -6332,6 +6335,7 @@ snapshots:
   babel-plugin-react-compiler@1.0.0:
     dependencies:
       '@babel/types': 7.29.0
+    optional: true
 
   balanced-match@1.0.2: {}
 

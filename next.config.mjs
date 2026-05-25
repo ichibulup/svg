@@ -4,7 +4,7 @@ const nextConfig = {
   transpilePackages: ["gorth-ui"],
 
   devIndicators: false,
-  reactCompiler: true,
+  // reactCompiler: true,
 };
 
 export default nextConfig;

@@ -4,9 +4,9 @@ import {
   Palette,
   ShieldCheck,
   SlidersHorizontal,
-} from "gorth-ui/cores/lucide";
-import { Badge } from "gorth-ui/default/badge";
-import { Button } from "gorth-ui/custom/button";
+} from "gorth-base-primitive/cores/lucide";
+import { Badge } from "gorth-base-primitive/default/badge";
+import { Button } from "gorth-base-primitive/custom/button";
 import {
   Card,
   CardContent,
@@ -14,25 +14,25 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "gorth-ui/default/card";
-import { Input } from "gorth-ui/default/input";
-import { Label } from "gorth-ui/default/label";
+} from "gorth-base-primitive/default/card";
+import { Input } from "gorth-base-primitive/default/input";
+import { Label } from "gorth-base-primitive/default/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "gorth-ui/default/select";
-import { Separator } from "gorth-ui/default/separator";
-import { Switch } from "gorth-ui/default/switch";
+} from "gorth-base-primitive/default/select";
+import { Separator } from "gorth-base-primitive/default/separator";
+import { Switch } from "gorth-base-primitive/default/switch";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "gorth-ui/custom/tabs";
-import { Textarea } from "gorth-ui/default/textarea";
+} from "gorth-base-primitive/custom/tabs";
+import { Textarea } from "gorth-base-primitive/default/textarea";
 
 const previewLogos = [
   { name: "Gorth", file: "/Gorth.svg" },
@@ -43,7 +43,7 @@ const previewLogos = [
 export default function Page() {
   return (
     <div className="flex flex-1 flex-col gap-6 p-4 md:p-6">
-      <section className="rounded-2xl border border-border bg-gradient-to-r from-slate-50 to-zinc-100 p-5 dark:from-zinc-900 dark:to-zinc-800">
+      <section className="rounded-2xl border border-border bg-linear-to-r from-slate-50 to-zinc-100 p-5 dark:from-zinc-900 dark:to-zinc-800">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <h1 className="text-2xl font-semibold tracking-tight">Dashboard Settings</h1>

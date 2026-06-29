@@ -5,9 +5,9 @@ import {
   LayoutDashboard,
   Sparkles,
   SwatchBook,
-} from "gorth-ui/cores/lucide";
-import { Badge } from "gorth-ui/default/badge";
-import { Button } from "gorth-ui/default/button";
+} from "gorth-base-primitive/cores/lucide";
+import { Badge } from "gorth-base-primitive/default/badge";
+import { Button } from "gorth-base-primitive/default/button";
 import {
   Card,
   CardContent,
@@ -15,14 +15,14 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "gorth-ui/default/card";
+} from "gorth-base-primitive/default/card";
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-} from "gorth-ui/default/navigation-menu";
-import { Separator } from "gorth-ui/default/separator";
+} from "gorth-base-primitive/default/navigation-menu";
+import { Separator } from "gorth-base-primitive/default/separator";
 
 const showcaseLogos = [
   { name: "Gorth", file: "/Gorth.svg", tone: "Metallic", usage: "Primary mark" },
@@ -36,7 +36,7 @@ const showcaseLogos = [
 const paletteNotes = [
   { title: "Horizontal Navigation", note: "Keep top navigation horizontal for landing flow." },
   { title: "SVG First", note: "Prefer SVG assets for sharp rendering at every size." },
-  { title: "Shadcn Blocks", note: "Use gorth-ui/default components for consistent styling." },
+  { title: "Shadcn Blocks", note: "Use gorth-base-primitive/default components for consistent styling." },
 ];
 
 export default function Home() {

@@ -1,9 +1,9 @@
 onlyBuiltDependencies:
-  - "gorth-ui"
-  - "gorth-base"
+  - "gorth-base-primitive"
+  - "gorth-base-structure"
 #allowBuilds:
 #  gorth-base: true
-#  gorth-ui: true
+#  gorth-base-primitive: true
 #  msw: false
 #  sharp: false
 #  unrs-resolver: false

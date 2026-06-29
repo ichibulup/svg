@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "gorth-ui/custom/button"
+import { Button } from "gorth-base-primitive/custom/button"
 import { useAuth } from "@/hooks/use-auth"
 
 export default function Page() {

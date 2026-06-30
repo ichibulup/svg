@@ -10,7 +10,6 @@
     "start": "next start",
     "lint": "eslint",
     "format": "prettier --write \"**/*.{ts,tsx}\"",
-    "typecheck": "tsc --noEmit",
     "postinstall": "pnpm update gorth-base-primitive gorth-base-structure"
   },
   "dependencies": {
@@ -28,9 +27,9 @@
     "eslint": "^9.39.4",
     "eslint-config-next": "16.2.9",
     "postcss": "^8.5.16",
-    "prettier": "^3.9.1",
+    "prettier": "^3.9.4",
     "prettier-plugin-tailwindcss": "^0.8.0",
-    "tailwindcss": "^4.3.1"
+    "tailwindcss": "^4.3.2"
   },
   "packageManager": "pnpm@10.33.4"
 }

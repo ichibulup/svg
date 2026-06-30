@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import axios from "gorth-base/cores/axios";
+import axios from "gorth-base-structure/cores/axios";
 import { routes } from "@/lib/environment";
 import { caller } from "@/lib/caller";
 

@@ -11,6 +11,7 @@ import {
   DataTableSortButton,
 } from "gorth-base-primitive/custom/data-table";
 import { exportToExcel, exportToDocx } from "@/lib/exporter";
+import { lotteryMockData, generateDynamicMonths } from "@/lib/lotter";
 
 export function DataTableToolbar({ table }) {
   return (
@@ -42,27 +43,11 @@ export function DataTableToolbar({ table }) {
 }
 
 export default function Page() {
-  const generateDynamicMonths = (count = 18) => {
-    const list = [];
-    const currentDate = new Date();
+  const data = [
+    ...lotteryMockData
+  ]
 
-    for (let i = 0; i < count; i++) {
-      const d = new Date(currentDate.getFullYear(), currentDate.getMonth() - i, 1);
-      const monthNum = d.getMonth() + 1; // getMonth() chạy từ 0-11
-      const yearNum = d.getFullYear();
-
-      // key đồng bộ hệ thống để map dữ liệu (Ví dụ: "thang_01_2026")
-      const key = `thang_${String(monthNum).padStart(2, "0")}_${yearNum}`;
-
-      // CHÍNH XÁC THEO ẢNH: Nếu là tháng 1 thì ghi kèm năm "1-YYYY", ngược lại các tháng khác chỉ ghi số tháng.
-      const label = monthNum === 1 ? `1-${yearNum}` : `${monthNum}`;
-
-      list.push({ key, label });
-    }
-
-    // Đảo ngược mảng để tháng hiện tại nằm cuối cùng bên phải như ảnh mẫu của bạn
-    return list.reverse();
-  };
+  console.log(lotteryMockData)
 
   const months = generateDynamicMonths(18)
   // const months = [
@@ -149,30 +134,68 @@ export default function Page() {
         <div className="text-center font-semibold">*</div>
       ),
       cell: ({ row }) => (
-        <div className="text-center font-semibold">{row}</div>
+        <div className="text-center font-semibold">{row.index + 1}</div>
       ),
       size: 64,
     },
+    // ...months.map((month) => ({
+    //   accessorKey: month.key,
+    //   header: () => (
+    //     <div className="text-center font-semibold">{month.label}</div>
+    //   ),
+    //   cell: ({ row }) => {
+    //     // Lưu ý: Đoạn này đang lấy trạng thái switch động theo từng tháng,
+    //     // ví dụ: row.original.january hoặc row.original.february dưới dạng boolean.
+    //     // Nếu data của bạn lưu trạng thái tất cả các tháng chung một biến `is_active`, hãy đổi lại thành row.original.is_active
+    //     const isMonthActive = !!row.original[month.key];
+
+    //     return (
+    //       <div className="flex items-center justify-center">
+    //         {/* <Switch
+    //           checked={isMonthActive}
+    //           onCheckedChange={(checked) =>
+    //             handleToggleStatus(row.original.id, month.key, checked)
+    //           }
+    //           // disabled={isUpdating}
+    //         /> */}
+    //         {row.data}
+    //       </div>
+    //     );
+    //   },
+    //   filterFn: (row, id, value) => {
+    //     return value.includes(row.getValue(id));
+    //   },
+    //   size: 70,
+    // })),
     ...months.map((month) => ({
       accessorKey: month.key,
       header: () => (
-        <div className="text-center font-semibold">{month.label}</div>
+        <div className="text-center font-semibold whitespace-nowrap px-1">
+          {month.label}
+        </div>
       ),
       cell: ({ row }) => {
-        // Lưu ý: Đoạn này đang lấy trạng thái switch động theo từng tháng,
-        // ví dụ: row.original.january hoặc row.original.february dưới dạng boolean.
-        // Nếu data của bạn lưu trạng thái tất cả các tháng chung một biến `is_active`, hãy đổi lại thành row.original.is_active
-        const isMonthActive = !!row.original[month.key];
+        const value = row.original[month.key];
+        const dayNum = row.index + 1; // row.index chạy từ 0-30 tương ứng ngày 1-31
 
+        // Kiểm tra xem ô hiện tại có phải là ngày Chủ Nhật hợp lệ hay không
+        const isSunday = new Date(month.yearNum, month.monthNum - 1, dayNum).getDay() === 0;
+
+        // Nếu ô trống (tháng thiếu ngày 31, 30...) thì không hiển thị gì cả
+        if (value === undefined || value === "") {
+          return <div className="text-center">-</div>; 
+        }
+
+        // Nếu là chữ "TẾT" hoặc có chứa chữ, hoặc bạn muốn hiển thị text kết quả xổ số:
         return (
-          <div className="flex items-center justify-center">
-            <Switch
-              checked={isMonthActive}
-              onCheckedChange={(checked) =>
-                handleToggleStatus(row.original.id, month.key, checked)
-              }
-              disabled={isUpdating}
-            />
+          <div 
+            className={`text-center font-medium transition-colors ${
+              isSunday 
+                ? "text-red-600 font-bold dark:text-red-500" // Định dạng cho Chủ Nhật: Màu đỏ, In đậm
+                : "text-foreground font-normal"             // Định dạng ngày thường: Chữ thường, màu mặc định
+            }`}
+          >
+            {value}
           </div>
         );
       },
@@ -223,7 +246,7 @@ export default function Page() {
         <div className="text-center font-semibold">*</div>
       ),
       cell: ({ row }) => (
-        <div className="text-center font-semibold">{row}</div>
+        <div className="text-center font-semibold">{row.index + 1}</div>
       ),
       size: 64,
     },
@@ -234,7 +257,7 @@ export default function Page() {
       Japtor
       <DataTable
         columns={columns}
-        data={[]}
+        data={data}
         search={{
           column: "first_month",
           placeholder: "Search...",
@@ -243,6 +266,7 @@ export default function Page() {
         filter={[]}
         onCreate={() => {}}
         onReload={() => {}}
+        onUpdate={() => {}}
       />
       {/* <DataTable
         columns={""}

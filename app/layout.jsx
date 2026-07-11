@@ -1,7 +1,9 @@
 "use client"
 
-import { Geist, Geist_Mono, Inter } from "next/font/google"
+import { useEffect } from "react";
+import { Geist_Mono, Inter } from "next/font/google"
 
+import "@/styles/globals.css"
 import "gorth-base-primitive/globals.css";
 import { ThemeProvider } from "gorth-base-primitive/providers/theme";
 import { ToasterProvider } from "gorth-base-primitive/providers/toaster";
@@ -21,7 +23,13 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", inter.variable)}
+      className={cn(
+        "antialiased",
+        // "overflow-auto scrollbar-none scrollbar-thumb-gray-400 scrollbar-track-transparent",
+        fontMono.variable,
+        "font-sans",
+        inter.variable
+      )}
     >
     <body>
       <ThemeProvider>

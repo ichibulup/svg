@@ -131,7 +131,7 @@ export default function Page() {
                 {previewLogos.map((logo) => (
                   <div
                     key={logo.file}
-                    className="rounded-xl border border-dashed border-border bg-gradient-to-br from-zinc-50 to-zinc-100 p-4 text-center dark:from-zinc-900 dark:to-zinc-800"
+                    className="rounded-xl border border-dashed border-border bg-linear-to-br from-zinc-50 to-zinc-100 p-4 text-center dark:from-zinc-900 dark:to-zinc-800"
                   >
                     <Image
                       src={logo.file}
@@ -236,6 +236,15 @@ export default function Page() {
           </Card>
         </TabsContent>
       </Tabs>
+      <div>
+        <p>Japtor</p>
+        <p>Japtor</p>
+        <p>Japtor</p>
+        <p>Japtor</p>
+        <p>Japtor</p>
+        <p>Japtor</p>
+        <p>Japtor</p>
+      </div>
     </div>
   );
 }

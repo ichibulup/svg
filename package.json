@@ -1,39 +1,39 @@
 {
   "name": "svg",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "type": "module",
   "private": true,
   "scripts": {
     "pulls": "pnpm install",
-    "dev": "next dev --turbopack --port 4000",
+    "dev": "next dev --turbopack --port 5500",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "format": "prettier --write \"**/*.{ts,tsx}\"",
-    "postinstall": "pnpm update gorth-base-primitive gorth-base-structure"
+    "postinstall": "pnpm update @gorth/primitive @gorth/structure"
   },
   "dependencies": {
+    "@gorth/primitive": "github:goraria/base-primitive",
+    "@gorth/structure": "github:goraria/base-structure",
     "docx": "^9.7.1",
     "file-saver": "^2.0.5",
-    "gorth-base-primitive": "github:goraria/gorth-base-primitive",
-    "gorth-base-structure": "github:goraria/gorth-base-structure",
-    "next": "16.2.10",
+    "next": "16.2.12",
     "next-themes": "^0.4.6",
-    "react": "^19.2.7",
-    "react-dom": "^19.2.7",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
     "vaul": "^1.1.2",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.6",
-    "@tailwindcss/postcss": "^4.3.2",
+    "@tailwindcss/postcss": "^4.3.3",
     "@types/file-saver": "^2.0.7",
-    "eslint": "^9.39.4",
-    "eslint-config-next": "16.2.10",
-    "postcss": "^8.5.16",
-    "prettier": "^3.9.5",
-    "prettier-plugin-tailwindcss": "^0.8.0",
-    "tailwindcss": "^4.3.2"
+    "eslint": "^9.39.5",
+    "eslint-config-next": "16.2.12",
+    "postcss": "^8.5.25",
+    "prettier": "^3.9.6",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "tailwindcss": "^4.3.3"
   },
   "packageManager": "pnpm@10.33.4"
 }

@@ -1,6 +1,6 @@
 onlyBuiltDependencies:
-  - "gorth-base-primitive"
-  - "gorth-base-structure"
+  - "@gorth/primitive"
+  - "@gorth/structure"
 #allowBuilds:
 #  gorth-base: true
 #  gorth-base-primitive: true

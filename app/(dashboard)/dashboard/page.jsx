@@ -4,9 +4,9 @@ import {
   Palette,
   ShieldCheck,
   SlidersHorizontal,
-} from "gorth-base-primitive/cores/lucide";
-import { Badge } from "gorth-base-primitive/default/badge";
-import { Button } from "gorth-base-primitive/custom/button";
+} from "@gorth/primitive/cores/lucide";
+import { Badge } from "@gorth/primitive/default/badge";
+import { Button } from "@gorth/primitive/custom/button";
 import {
   Card,
   CardContent,
@@ -14,25 +14,25 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "gorth-base-primitive/default/card";
-import { Input } from "gorth-base-primitive/default/input";
-import { Label } from "gorth-base-primitive/default/label";
+} from "@gorth/primitive/default/card";
+import { Input } from "@gorth/primitive/default/input";
+import { Label } from "@gorth/primitive/default/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "gorth-base-primitive/default/select";
-import { Separator } from "gorth-base-primitive/default/separator";
-import { Switch } from "gorth-base-primitive/default/switch";
+} from "@gorth/primitive/default/select";
+import { Separator } from "@gorth/primitive/default/separator";
+import { Switch } from "@gorth/primitive/default/switch";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "gorth-base-primitive/custom/tabs";
-import { Textarea } from "gorth-base-primitive/default/textarea";
+} from "@gorth/primitive/custom/tabs";
+import { Textarea } from "@gorth/primitive/default/textarea";
 
 const previewLogos = [
   { name: "Gorth", file: "/Gorth.svg" },

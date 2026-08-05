@@ -1,16 +1,16 @@
 import Link from "next/link"
 import Image from "next/image"
 import React from "react"
-import { Dashbar as Container } from "gorth-base-primitive/layouts/dashbar"
-import { Separator } from "gorth-base-primitive/default/separator"
+import { Dashbar as Container } from "@gorth/primitive/layouts/dashbar"
+import { Separator } from "@gorth/primitive/default/separator"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "gorth-base-primitive/default/tooltip"
-import { SidebarTrigger } from "gorth-base-primitive/custom/sidebar"
-import { ModeSwitcher } from "gorth-base-primitive/element/mode-toggle"
-import { Command } from "gorth-base-primitive/cores/lucide"
+} from "@gorth/primitive/default/tooltip"
+import { SidebarTrigger } from "@gorth/primitive/custom/sidebar"
+import { ModeSwitcher } from "@gorth/primitive/element/mode-toggle"
+import { Command } from "@gorth/primitive/cores/lucide"
 
 export function Dashbar() {
   return (

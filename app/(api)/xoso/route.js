@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import axios from "gorth-base-structure/cores/axios"
+import axios from "@gorth/structure/cores/axios"
 
 export async function GET(request) {
   const url = "https://xoso.com.vn/ThongKeAjax/AjaxThongKeGiaiDacBiet?lotteryId=0&dateFrom=22%2F06%2F2026&dateTo=01%2F07%2F2026&num=0"

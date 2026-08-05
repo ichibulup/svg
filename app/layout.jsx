@@ -4,12 +4,12 @@ import { useEffect } from "react";
 import { Geist_Mono, Inter } from "next/font/google"
 
 import "@/styles/globals.css"
-import "gorth-base-primitive/globals.css";
-import { ThemeProvider } from "gorth-base-primitive/providers/theme";
-import { ToasterProvider } from "gorth-base-primitive/providers/toaster";
-import { TooltipProvider } from "gorth-base-primitive/default/tooltip";
+import "@gorth/primitive/globals.css";
+import { ThemeProvider } from "@gorth/primitive/providers/theme";
+import { ToasterProvider } from "@gorth/primitive/providers/toaster";
+import { TooltipProvider } from "@gorth/primitive/default/tooltip";
 import { AuthProvider } from "@/providers/auth";
-import { cn } from "gorth-base-primitive/lib/utils";
+import { cn } from "@gorth/primitive/lib/utils";
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'})
 
@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
 }
 
 // import { Geist, Geist_Mono } from "next/font/google";
-// import "gorth-base-primitive/globals.css";
+// import "@gorth/primitive/globals.css";
 //
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",

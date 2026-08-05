@@ -1,2 +1,2 @@
 @import "tailwindcss";
-@import "gorth-base-primitive/globals.css";
+@import "@gorth/primitive/globals.css";

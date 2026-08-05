@@ -1,9 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Footer } from "gorth-base-primitive/layouts/footer"
-import { Navbar } from "gorth-base-primitive/layouts/navbar"
-import { Button } from "gorth-base-primitive/default/button"
+import { Button } from "@gorth/primitive/default/button"
 
 const navItems = [
   { title: "Logos", href: "/logos" },
@@ -15,14 +13,14 @@ const navItems = [
 
 export default function SharedLayout({ children }) {
   return (
-    <>
-      <Navbar>
-        <div className="flex w-full items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-2 text-sm font-semibold">
+    <div className="flex min-h-screen flex-col">
+      <header className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur">
+        <div className="container mx-auto flex h-16 items-center justify-between gap-4 px-6">
+          <Link href="/" className="text-sm font-semibold">
             JP
           </Link>
 
-          <nav className="hidden items-center gap-1 md:flex">
+          <nav className="hidden items-center gap-1 md:flex" aria-label="Main navigation">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -38,21 +36,19 @@ export default function SharedLayout({ children }) {
             <Link href="/dashboard">Dashboard</Link>
           </Button>
         </div>
-      </Navbar>
-      <main className="flex flex-1 flex-col">
-        <div className="flex flex-1 flex-col">
-          <div className="container mx-auto p-6">{children}</div>
-        </div>
-      </main>
-      <Footer>
-        <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
+      </header>
+
+      <main className="container mx-auto flex-1 p-6">{children}</main>
+
+      <footer className="border-t bg-background/95">
+        <div className="container mx-auto flex flex-wrap items-center gap-3 p-6 text-sm text-muted-foreground">
           {navItems.map((item) => (
             <Link key={item.href} href={item.href} className="hover:text-foreground">
               {item.title}
             </Link>
           ))}
         </div>
-      </Footer>
-    </>
+      </footer>
+    </div>
   )
 }
